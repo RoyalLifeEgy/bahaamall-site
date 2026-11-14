@@ -1,27 +1,30 @@
 {
   "storeName": "Bahaa Mall",
+  "storeNameAr": "بهاء مول",
   "legalName": "بهاء احمد محمد النجولي",
   "descriptionEn": "retail of ready-made clothing for men, women and children",
   "descriptionAr": "بيع الملابس الجاهزة بالتجزئة للرجال والسيدات والأطفال",
   "address": "سوق اللبن، العمرية، المحلة الكبرى، الغربية، مصر",
+  "addressEn": "Souq El-Laban, El-Omareya, El-Mahalla El-Kubra, Gharbia, Egypt",
   "phoneDisplay": "015 5982 2668",
   "phoneIntl": "+201559822668",
   "whatsappIntl": "201559822668",
   "email": "info@bahaamall.store",
   "facebook": "https://www.facebook.com/profile.php?id=61561883770027",
-  "heroImage": { "file": "store-sign.jpg", "alt": "لافتة محل بهاء – Bahaa store sign" },
-  "photos": [
-    { "file": "family-1.jpg", "alt": "عبايات وملابس للسيدات والبنات" },
-    { "file": "women-1.jpg", "alt": "عباية حريمي قطيفة رمادي" },
-    { "file": "women-2.jpg", "alt": "عباية حريمي رمادي فاتح" },
+  "images": {
+    "hero": { "file": "women-6.jpg", "alt": "عباية حريمي قطيفة زيتي" },
+    "sign": { "file": "store-sign.jpg", "alt": "لافتة بهاء – Bahaa store sign" },
+    "visit": { "file": "family-1.jpg", "alt": "عبايات للسيدات والبنات" }
+  },
+  "collections": [
+    { "file": "women-1.jpg", "ar": "حريمي", "en": "Women", "alt": "عباية حريمي قطيفة", "ask": "مرحباً، أريد الاستفسار عن ملابس الحريمي المتاحة" },
+    { "file": "men-1.jpg", "ar": "رجالي", "en": "Men", "alt": "ترينج رجالي قطيفة بني", "ask": "مرحباً، أريد الاستفسار عن الملابس الرجالي المتاحة" },
+    { "file": "kids-2.jpg", "ar": "أطفال", "en": "Children", "alt": "ملابس أطفال بناتي", "ask": "مرحباً، أريد الاستفسار عن ملابس الأطفال المتاحة" }
+  ],
+  "lookbook": [
     { "file": "women-3.jpg", "alt": "عباية حريمي موف" },
-    { "file": "women-4.jpg", "alt": "عباية حريمي مشجرة" },
-    { "file": "women-5.jpg", "alt": "عباية حريمي رمادي بفرو" },
-    { "file": "women-6.jpg", "alt": "عباية حريمي زيتي" },
-    { "file": "men-1.jpg", "alt": "ترينج رجالي بني" },
-    { "file": "men-2.jpg", "alt": "جاكيت رجالي بيج" },
     { "file": "kids-1.jpg", "alt": "ملابس أطفال ولادي" },
-    { "file": "kids-2.jpg", "alt": "ملابس أطفال بناتي" },
+    { "file": "men-2.jpg", "alt": "جاكيت رجالي بيج", "tone": true },
     { "file": "kids-3.jpg", "alt": "طقم أطفال بناتي" }
   ],
   "commercialRegister": "44883 – المحلة الكبرى",
