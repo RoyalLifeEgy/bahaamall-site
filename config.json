@@ -1,0 +1,20 @@
+{
+  "storeName": "Bahaa Mall",
+  "legalName": "بهاء احمد محمد النجولي",
+  "descriptionEn": "retail of ready-made clothing for men, women and children",
+  "descriptionAr": "بيع الملابس الجاهزة بالتجزئة للرجال والسيدات والأطفال",
+  "address": "سوق اللبن، العمرية، المحلة الكبرى، الغربية، مصر",
+  "phoneDisplay": "TODO-PHONE (e.g. 0100 123 4567)",
+  "phoneIntl": "TODO-PHONE-INTL (e.g. +201001234567)",
+  "whatsappIntl": "TODO-WHATSAPP-DIGITS-ONLY (e.g. 201001234567)",
+  "email": "info@bahaamall.store",
+  "facebook": "https://www.facebook.com/profile.php?id=61561883770027",
+  "mapsEmbedQuery": "سوق اللبن، العمرية، المحلة الكبرى، الغربية، مصر",
+  "hoursAr": ["TODO-HOURS: السبت – الخميس: ١٠ صباحاً – ١١ مساءً", "TODO-HOURS: الجمعة: ٢ ظهراً – ١١ مساءً"],
+  "hoursEn": ["TODO-HOURS: Saturday – Thursday: 10:00 am – 11:00 pm", "TODO-HOURS: Friday: 2:00 pm – 11:00 pm"],
+  "commercialRegister": "44883 – المحلة الكبرى",
+  "taxNumber": "474-804-240",
+  "photos": [],
+  "metaDomainVerification": "",
+  "domain": "bahaamall.store"
+}
