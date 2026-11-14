@@ -44,12 +44,14 @@ const footer = `<footer class="foot"><div class="wrap foot__grid">
 </body></html>`;
 
 const photos = c.photos.length
-  ? c.photos.map((p) => `<figure><img src="img/${esc(p.file)}" alt="${esc(p.alt || c.storeName)}" loading="lazy" width="800" height="600"></figure>`).join('')
+  ? c.photos.map((p) => `<figure><img src="img/${esc(p.file)}" alt="${esc(p.alt || c.storeName)}" loading="lazy" width="600" height="800"></figure>`).join('')
   : `<figure class="ph"><span>صورة المحل</span></figure><figure class="ph"><span>ملابس رجالي</span></figure><figure class="ph"><span>ملابس حريمي</span></figure><figure class="ph"><span>ملابس أطفال</span></figure>`;
 
 const index = `${head(`${c.storeName} – ملابس جاهزة للرجال والسيدات والأطفال`, `${c.storeName}: ${c.descriptionEn}. ${c.address}`)}
 <main>
 <section class="hero"><div class="wrap hero__in">
+  ${c.heroImage ? `<img class="hero__img" src="img/${esc(c.heroImage.file)}" alt="${esc(c.heroImage.alt)}" width="1024" height="1024">` : ''}
+  <div class="hero__txt">
   <p class="hero__kicker">المحلة الكبرى · Mahalla El Kubra</p>
   <h1>${esc(c.storeName)}</h1>
   <p class="hero__ar">${esc(c.descriptionAr)}</p>
@@ -57,6 +59,7 @@ const index = `${head(`${c.storeName} – ملابس جاهزة للرجال و�
   <div class="hero__cta">
     <a class="btn btn--wa" href="https://wa.me/${esc(c.whatsappIntl)}" target="_blank" rel="noopener">تواصل عبر واتساب</a>
     <a class="btn btn--call" href="tel:${esc(c.phoneIntl)}">اتصل بنا <span dir="ltr">${esc(c.phoneDisplay)}</span></a>
+  </div>
   </div>
 </div></section>
 
@@ -66,7 +69,11 @@ const index = `${head(`${c.storeName} – ملابس جاهزة للرجال و�
     <p lang="en" dir="ltr" class="en-block">${esc(c.storeName)} – ${esc(c.descriptionEn)}.</p>
     <p>الاسم القانوني: <b>${esc(c.legalName)}</b></p></article>
   <article class="card" id="hours"><h2>مواعيد العمل <span class="en">Opening hours</span></h2>
-    <ul class="hours">${(c.hoursAr.length ? c.hoursAr : ['تُعلن قريباً']).map((h, i) => `<li>${esc(h)}<br><span class="en" dir="ltr">${esc(c.hoursEn[i] ?? '')}</span></li>`).join('')}</ul></article>
+    ${c.hoursAr?.length
+      ? `<ul class="hours">${c.hoursAr.map((h, i) => `<li>${esc(h)}<br><span class="en" dir="ltr">${esc(c.hoursEn?.[i] ?? '')}</span></li>`).join('')}</ul>`
+      : `<p>للاستعلام عن مواعيد العمل تواصل معنا على واتساب أو بالتليفون.</p>
+    <p lang="en" dir="ltr" class="en-block">For opening hours, message us on WhatsApp or call us.</p>
+    <p><a class="btn btn--wa btn--sm" href="https://wa.me/${esc(c.whatsappIntl)}" target="_blank" rel="noopener">واتساب <span dir="ltr">${esc(c.phoneDisplay)}</span></a></p>`}</article>
 </section>
 
 <section class="wrap"><h2 class="sec">من داخل المحل <span class="en">Our store</span></h2><div class="gallery">${photos}</div></section>
@@ -78,7 +85,12 @@ const index = `${head(`${c.storeName} – ملابس جاهزة للرجال و�
     <p class="row"><b>واتساب:</b> <a href="https://wa.me/${esc(c.whatsappIntl)}" target="_blank" rel="noopener">راسلنا على واتساب</a></p>
     <p class="row"><b>البريد الإلكتروني:</b> <a href="mailto:${esc(c.email)}">${esc(c.email)}</a></p>
     <p class="row"><b>فيسبوك:</b> <a href="${esc(c.facebook)}" target="_blank" rel="noopener">صفحتنا على فيسبوك</a></p></div>
-  <div class="map"><iframe title="موقع ${esc(c.storeName)} على الخريطة" src="https://www.google.com/maps?q=${encodeURIComponent(c.mapsEmbedQuery)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+  <div class="contact__en" lang="en" dir="ltr"><h2 class="sec">Contact us</h2>
+    <p class="row"><b>Address:</b> Souq El-Laban, El-Omareya, El-Mahalla El-Kubra, Gharbia, Egypt</p>
+    <p class="row"><b>Phone:</b> <a href="tel:${esc(c.phoneIntl)}">${esc(c.phoneDisplay)}</a></p>
+    <p class="row"><b>WhatsApp:</b> <a href="https://wa.me/${esc(c.whatsappIntl)}" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+    <p class="row"><b>Email:</b> <a href="mailto:${esc(c.email)}">${esc(c.email)}</a></p>
+    <p class="row"><b>Facebook:</b> <a href="${esc(c.facebook)}" target="_blank" rel="noopener">Our Facebook page</a></p></div>
 </section>
 </main>
 ${footer}`;
